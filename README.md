@@ -1,5 +1,7 @@
 # 處理需要模型需要Release GPU memerory 的情狀
+
 實作截圖
+
 ![image](https://user-images.githubusercontent.com/101046093/176831896-450091b1-daf4-43c2-8a08-ce6fcb3e8b4a.png)
 
 利用 multiprocessing  套件來釋放記憶體，
