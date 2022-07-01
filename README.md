@@ -5,7 +5,7 @@
 利用 multiprocessing  套件來釋放記憶體，
 要把multiprocessing 寫在 main function 底下
 
-``== python
+```python
 from multiprocessing import Process, Queue
 import tensorflow as tf
 from tensorflow.keras.datasets import mnist
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     import os
     """ 關到他媽tensorflow 垃圾 loggin 輸出 """
     os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-   # Mnist Dataset
+    # Mnist Dataset
     (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
     x_train = X_train.reshape(60000, 1, 28, 28)/255
     x_test = X_test.reshape(10000, 1, 28, 28)/255
@@ -57,7 +57,8 @@ if __name__ == "__main__":
 ```
 
 另外一個建立多個執行續的寫法
-```== python
+
+```python
 # 建立存放執行序的list(存放thread)
 threads = []
 
@@ -72,4 +73,4 @@ for t in threads:
 # 等待所有子執行緒結束
 for t in threads:
     t.join()
-
+```
